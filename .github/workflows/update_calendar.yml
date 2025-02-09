@@ -20,10 +20,10 @@ jobs:
       - name: Install dependencies
         run: pip install ics requests
 
-      - name: Change directory to root and run the script
+      - name: Change directory to calendartrimmer and run the script
         run: |
-          cd $GITHUB_WORKSPACE  # Make sure we're in the correct directory
-          python calendartrimmer/calendartrimmer.py  # Correct path
+          cd calendartrimmer  # Change to the calendartrimmer folder
+          python calendartrimmer.py  # Run the script in the correct directory
 
       - name: Ensure directory exists
         run: mkdir -p calendartrimmer  # Ensure the directory for filtered ICS exists
