@@ -12,18 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Print directory structure
-        run: |
-          echo "Current working directory: $(pwd)"  # Prints the current directory
-          echo "Listing files in /home/runner/work:"
-          ls /home/runner/work
-          echo "Listing files in /home/runner/work/pages:"
-          ls /home/runner/work/pages
-          echo "Listing files in /home/runner/work/pages/pages (the checked-out repository):"
-          ls /home/runner/work/pages/pages
-          echo "Listing files in /home/runner/work/pages/pages/calendartrimmer (directory for script):"
-          ls /home/runner/work/pages/pages/calendartrimmer  # Check contents of calendartrimmer
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -35,16 +23,20 @@ jobs:
       - name: Change directory to calendartrimmer and run the script
         run: |
           cd /home/runner/work/pages/pages/calendartrimmer  # Change to the correct directory
-          echo "Current working directory after cd: $(pwd)"  # Print the new directory
           python CalendarTrimmer.py  # Run the script
 
       - name: Ensure directory exists
         run: mkdir -p calendartrimmer  # Ensure the directory for filtered ICS exists
 
       - name: Commit and push updated ICS file
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the secret for authentication
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add calendartrimmer/filtered_calendar.ics  # Correct path to ICS file
+          git add calendartrimmer/filtered_calendar.ics
           git commit -m "Update filtered ICS file" || echo "No changes to commit"
+          
+          # Authenticate with the GitHub token to allow pushing
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/sbarahon-su/pages.git
           git push origin main
