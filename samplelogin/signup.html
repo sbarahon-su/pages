@@ -72,7 +72,7 @@
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
-        import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+        import { getDatabase, getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
         // Your web app's Firebase configuration
@@ -92,36 +92,51 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         console.log("Firebase initialized:", app);
-        
-        // Get a reference to the database service
-        const db = getDatabase(app);
 
-        // Function to save user data
-        function saveUserData(name, email, password) {
-            const usersRef = ref(db, "users");
-            const newUserRef = push(usersRef); // Generate unique ID
-            set(newUserRef, {
-                name: name,
-                email: email,
-                password: password
-            })
-            .then(() => {
+        import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-                // document.getElementById("signupform").reset(); // Clear form
-                window.location.href = "confirmation.html";
-            })
-            .catch((error) => {
-                console.error("Error saving data:", error);
-            });
-        }
-        // Handle form submission
-        document.getElementById("signupform").addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent page refresh
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            saveUserData(name, email, password);
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+        // Signed up 
+            const user = userCredential.user;
+        // ...
+        })
+        .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
         });
+        
+        // // Get a reference to the database service
+        // const db = getDatabase(app);
+
+        // // Function to save user data
+        // function saveUserData(name, email, password) {
+        //     const usersRef = ref(db, "users");
+        //     const newUserRef = push(usersRef); // Generate unique ID
+        //     set(newUserRef, {
+        //         name: name,
+        //         email: email,
+        //         password: password
+        //     })
+        //     .then(() => {
+
+        //         // document.getElementById("signupform").reset(); // Clear form
+        //         window.location.href = "confirmation.html";
+        //     })
+        //     .catch((error) => {
+        //         console.error("Error saving data:", error);
+        //     });
+        // }
+        // // Handle form submission
+        // document.getElementById("signupform").addEventListener("submit", function (e) {
+        //     e.preventDefault(); // Prevent page refresh
+        //     const name = document.getElementById("name").value;
+        //     const email = document.getElementById("email").value;
+        //     const password = document.getElementById("password").value;
+        //     saveUserData(name, email, password);
+        // });
     </script>
 </body>
 </html>
