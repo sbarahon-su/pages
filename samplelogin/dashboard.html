@@ -11,19 +11,18 @@
 
     <body class="min-h-screen flex items-center justify-center bg-gray-150">
         <div class="bg-white p-8 rounded shadow-md text-center w-96">
-            <h2 class="text-2xl font-bold">Welcome to Your Dashboard</h2>
+            <h2 class="text-2xl font-bold">Welcome to Your Dashboard</h2><br>
+            <h2 class="text-2xl font-bold">Your user</h2>
             <p id="userEmail" class="mt-2 text-gray-700"></p>
             <button id="logoutBtn" class="mt-4 bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">Logout</button>
         </div>
 
         <script type="module">
-            // Import the functions you need from the SDKs you need
+            // Correct Firebase imports
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-            import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+    
+            // Firebase Configuration
             const firebaseConfig = {
                 apiKey: "AIzaSyDmfSwZQwO0mvtNbqCDpcIaylIAO-yYwFw",
                 authDomain: "samplelogin-eb15a.firebaseapp.com",
@@ -37,25 +36,29 @@
     
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
+            const auth = getAuth(app);  // Initialize Auth
+    
             console.log("Firebase initialized:", app);
-
+    
             // Check if user is logged in
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                document.getElementById("email").textContent = `Logged in as: ${user.email}`;
-            } else {
-                // Redirect to login if no user is found
-                window.location.href = "index.html";
-            }
-        });
-
-        // Logout function
-        document.getElementById("logoutBtn").addEventListener("click", () => {
-            signOut(auth).then(() => {
-                window.location.href = "index.html";
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    document.getElementById("userEmail").textContent = `Logged in as: ${user.email}`;
+                } else {
+                    // Redirect to login if no user is found
+                    window.location.href = "index.html";
+                }
             });
-        });
+    
+            // Logout function
+            document.getElementById("logoutBtn").addEventListener("click", () => {
+                signOut(auth).then(() => {
+                    console.log("User logged out");
+                    window.location.href = "index.html";
+                }).catch((error) => {
+                    console.error("Logout error:", error);
+                });
+            });
         </script>
     </body>
 </html>
