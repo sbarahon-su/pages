@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, timezone
 ICS_URL = "https://blackboard.syracuse.edu/webapps/calendar/calendarFeed/c16a35588ed3475895aa4ebc5a1a18f4/learn.ics"
 
 # Keywords to filter out (e.g., office hours, meetings)
-EXCLUDE_KEYWORDS = ["Office Hours", "Meeting", "Lecture"]
+EXCLUDE_KEYWORDS = ["Office Hours", "Meeting", "Lecture, Recitation"]
 
 # Define the time range: 1 week before today up to the future
 now = datetime.now(timezone.utc)
