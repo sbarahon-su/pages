@@ -21,6 +21,8 @@ jobs:
           ls /home/runner/work/pages
           echo "Listing files in /home/runner/work/pages/pages (the checked-out repository):"
           ls /home/runner/work/pages/pages
+          echo "Listing files in /home/runner/work/pages/pages/calendartrimmer (directory for script):"
+          ls /home/runner/work/pages/pages/calendartrimmer  # Check contents of calendartrimmer
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -32,10 +34,9 @@ jobs:
 
       - name: Change directory to calendartrimmer and run the script
         run: |
-          # Assuming the correct path is /home/runner/work/pages/pages/calendartrimmer
-          cd /home/runner/work/pages/pages/calendartrimmer  # Explicitly point to correct directory
+          cd /home/runner/work/pages/pages/calendartrimmer  # Change to the correct directory
           echo "Current working directory after cd: $(pwd)"  # Print the new directory
-          python calendartrimmer.py  # Run the script in the correct directory
+          python calendartrimmer.py  # Run the script
 
       - name: Ensure directory exists
         run: mkdir -p calendartrimmer  # Ensure the directory for filtered ICS exists
