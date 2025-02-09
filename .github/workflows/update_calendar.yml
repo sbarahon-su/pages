@@ -28,7 +28,7 @@ jobs:
         run: |
           # Fix the path issue by going to the correct folder
           ls /home/runner/work
-          ls /home/runer//work/pages
+          ls /home/runner/work/pages
           cd /home/runner/work/pages/calendartrimmer  # Explicitly point to correct directory
           echo "Current working directory after cd: $(pwd)"  # Print the new directory
           python calendartrimmer.py  # Run the script in the correct directory
