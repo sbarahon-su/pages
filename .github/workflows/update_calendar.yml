@@ -2,7 +2,7 @@ name: Update ICS File
 
 on:
   schedule:
-    - cron: '0 0 */3 * *'  # Runs every 3 days at midnight UTC
+    - cron: '0 5 * * *'  # Runs every day at midnight EST
   workflow_dispatch:  # Allows manual trigger if needed
 
 jobs:
