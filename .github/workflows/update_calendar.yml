@@ -21,15 +21,15 @@ jobs:
         run: pip install ics requests
 
       - name: Run script
-        run: python calendartrimmer/calendartrimmer.py
+        run: python pages/calendartrimmer/calendartrimmer.py  # Corrected path
 
       - name: Ensure directory exists
-        run: mkdir -p calendartrimmer
+        run: mkdir -p pages/calendartrimmer  # Ensure the subfolder exists
 
       - name: Commit and push updated ICS file
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add calendartrimmer/filtered_calendar.ics
+          git add pages/calendartrimmer/filtered_calendar.ics
           git commit -m "Update filtered ICS file" || echo "No changes to commit"
           git push origin main
