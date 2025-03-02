@@ -1,0 +1,49 @@
+1. 
+	a. https://www.amnh.org/
+		https://everson.org/
+		https://airandspace.si.edu/
+	b. All the sites have plan your visit pages linked right on the front page, as well as a page to explore an overview of each museum. They also all links to learn different things related to the museum and its content and links to donate to its charities or foundations.
+	c. The AMNH has a link on their home page to become a member, since their so big they can sell subscription like passes to families and individuals. On the contrary I like the everson page because it feels more personalized to our area and has more ties to things going on in Syracuse.
+	d. I like the AMNH site the most because it feels the smoothest and portrays all the information they need to well. The everson site isn't bad but I dont like how their nav bar works, it doesn't feel as smooth as the others with the dropdown tabs for each category.
+	e. 
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+    		<meta charset="UTF-8">
+   		 	<title>IST 263 Museum - Sitemap</title>
+		</head>
+		<body>
+    		<h1>IST 263 Museum - Sitemap</h1>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+        		<li><a href="/visit">Visit</a></li>
+        		<li><a href="/exhibitions">Exhibitions</a></li>
+        		<li><a href="/collections">Collections</a></li>
+        		<li><a href="/events">Events</a></li>
+        		<li><a href="/education">Education</a></li>
+        		<li><a href="/dining">Food & Dining</a></li>
+        		<li><a href="/membership">Membership</a></li>
+        		<li><a href="/about">About</a></li>
+        		<li><a href="/contact">Contact</a></li>
+    		</ul>
+		</body>
+		</html>
+	f. 
+		I chose these pages because they're important to get all the information a potential visitor might need. The visit tab allows for users to quickly enter the planning and admission guides, the exhibitions and collections will show what we are currently showcasing at the museum, and the events page will have all the special programs going on for users to browse. Then we will have our about and contact pages to let users learn more about the museum and contact us with any questions, a membership tab to give deals for loyal visitors, and a food and dining page to showcase all that you can eat at and around the museum.
+
+
+
+
+
+
+
+a. body background: 60308c
+b. text color: e6f2ff
+c. link color: 9a99f2
+d. heading color: ccdcff
+e. Site Navigation Background: 511f73
+f. Site Navigation Highlight color: 8b79d9
+g. Site Navigation Link Color: 6f46a6
+
+
+	
