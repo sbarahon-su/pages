@@ -25,12 +25,18 @@ h1, p {
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     flex: 3;
+    padding: 20px;
+}
+
+.skill {
+    text-align: center;
     padding: 10px;
 }
+
 
 .sidebar {
     display: flex;
