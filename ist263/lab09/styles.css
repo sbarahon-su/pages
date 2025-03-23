@@ -39,16 +39,22 @@ h1, p {
 .sidebar {
     display: flex;
     flex: 1;
-    min-width: 25%;
     height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color :#6f46a6; 
     border-radius: 10px;
+    box-sizing:border-box;
 }
-aside {
+aside ul{
+    list-style-type: none;
+    padding-left: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
     width: 100%;
+    text-align: center;
     height: 100%;
 }
 
