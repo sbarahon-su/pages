@@ -9,9 +9,15 @@ h1, h2 {
     color: #92b2f7;
     text-align: center;
 }
+.flexbox2 {
+    display:flex;
+}
 .container {
     display: flex;
     align-items: center;
+}
+.sidebar {
+    display:flex;
 }
 nav {
     background-color: #e1d8f8;
