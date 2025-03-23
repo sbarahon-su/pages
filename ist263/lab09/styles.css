@@ -10,14 +10,25 @@ h1, h2 {
     text-align: center;
 }
 .flexbox2 {
-    display:flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
+
 .container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 70%;
 }
+
 .sidebar {
-    display:flex;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    width: 25%;
 }
 nav {
     background-color: #e1d8f8;
