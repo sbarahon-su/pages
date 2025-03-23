@@ -1,5 +1,5 @@
 body {
-    color: #b973d8;
+    color: black;
     background-color: whitesmoke;
 }
 a {
@@ -11,7 +11,7 @@ h1, h2 {
 }
 .container {
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 nav {
     background-color: #e1d8f8;
