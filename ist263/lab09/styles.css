@@ -1,6 +1,7 @@
 body {
     color: black;
     background-color: whitesmoke;
+    padding: 20px;
 }
 a {
     color: #9a99f2;
@@ -8,6 +9,9 @@ a {
 h1, h2 {
     color: #92b2f7;
     text-align: center;
+}
+h1, p {
+    margin-bottom: 20px
 }
 .flexbox2 {
     display: flex;
@@ -22,13 +26,16 @@ h1, h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     gap: 15px;
     flex: 3;
+    padding: 10px;
 }
 
 .sidebar {
     display: flex;
     flex: 1;
+    padding: 15px;
 }
 aside {
     background-color: #f8e1f4;
