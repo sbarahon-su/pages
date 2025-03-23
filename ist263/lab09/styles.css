@@ -20,15 +20,15 @@ h1, h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    width: 70%;
+    flex: 3;
 }
 
 .sidebar {
-    background-color: #f4f4f4;
+    background-color: pink;
     color: #333;
     padding: 15px;
     border-radius: 10px;
-    width: 25%;
+    flex: 1;
 }
 nav {
     background-color: #e1d8f8;
