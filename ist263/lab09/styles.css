@@ -9,6 +9,10 @@ h1, h2 {
     color: #92b2f7;
     text-align: center;
 }
+.container {
+    display: flex;
+    justify-content: center;
+}
 nav {
     background-color: #e1d8f8;
     padding: 10px;
