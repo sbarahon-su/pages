@@ -18,7 +18,7 @@ h1, p {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 30vh;
 }
 
 .skills-container {
@@ -39,14 +39,18 @@ h1, p {
 .sidebar {
     display: flex;
     flex: 1;
-    padding: 15px;
+    min-width: 25%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color :#6f46a6; 
+    border-radius: 10px;
 }
 aside {
-    background-color: #f8e1f4;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
+    width: 100%; /* Ensures the aside fills the sidebar */
+    height: 100%; /* Expands to match sidebar */
 }
+
 nav {
     background-color: #e1d8f8;
     padding: 10px;
