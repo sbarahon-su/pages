@@ -42,13 +42,14 @@ h1, p {
     min-width: 25%;
     height: 100%;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color :#6f46a6; 
     border-radius: 10px;
 }
 aside {
-    width: 100%; /* Ensures the aside fills the sidebar */
-    height: 100%; /* Expands to match sidebar */
+    width: 100%;
+    height: 100%;
 }
 
 nav {
