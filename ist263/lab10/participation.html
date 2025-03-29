@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Participation 10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <style>
+        .small {
+            display: flex;
+            height: 100lvh;
+            background-color: blue;
+        }
+        .large {
+            display: flex;
+            height:100lvh;
+            background-color: red;
+        }
+        @media only screen and (max-width: 800px) {
+            .large {
+                display: none;
+            }
+        }
+        @media only screen and (min-width: 800px) {
+            .small {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class = "small"><p>I'm small</p></div>
+    <div class = "large"><p>I'm large</p></div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    color: black;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+a {
+    color: #9a99f2;
+}
+h1, h2 {
+    color: #92b2f7;
+    text-align: center;
+}
+h1, p {
+    margin-bottom: 20px
+}
+.flexbox2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 30vh;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 3;
+    padding: 20px;
+}
+
+.skill {
+    text-align: center;
+    padding: 10px;
+}
+
+
+.sidebar {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color :#6f46a6; 
+    border-radius: 10px;
+    box-sizing:border-box;
+}
+aside ul{
+    list-style-type: none;
+    padding-left: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+nav {
+    background-color: #e1d8f8;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+nav a {
+    color: #6f46a6;
+}
+nav a:hover {
+    color: #8b79d9;
+}
+table {
+    border: 1px solid #6f46a6;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.evenrow {
+    background-color: #f2e9f7;
+}
