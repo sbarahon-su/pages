@@ -3,6 +3,17 @@ body {
     background-color: whitesmoke;
     padding: 20px;
 }
+img {
+    max-width: 100%;
+}
+
+#contactcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 a {
     color: #9a99f2;
 }
@@ -64,6 +75,25 @@ nav {
     margin-bottom: 30px;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav span {
+        display: none;
+    }
+}
+
 nav a {
     color: #6f46a6;
 }
