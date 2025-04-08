@@ -1,0 +1,25 @@
+ {
+    "student": {
+      "name": "Jordan Smith",
+      "age": 19,
+      "grade": "Sophomore",
+      "classes": [
+        {
+          "name": "Intro to Web Dev",
+          "teacher": "Prof. Scharf",
+          "grades": [88, 92, 95]
+        },
+        {
+          "name": "English",
+          "teacher": "Prof. Carter",
+          "grades": [90, 85, 93]
+        }
+      ],
+      "isDeansListStudent": true,
+      "contact": {
+        "email": "jordan.smith@syr.edu",
+        "phone": "555-123-4567"
+      }
+    }
+  }
+  

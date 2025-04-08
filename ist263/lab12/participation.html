@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Participation</title>
+</head>
+<body>
+    <div id="container" onclick="switchText();">Syracuse University</div>
+</body>
+<script>
+    function switchText() {
+        var container = document.getElementById("container");
+        if (container.innerHTML === "Syracuse University") {
+            container.innerHTML = "Orange Nation";
+            container.style.color = "orange";
+        } else {
+            container.innerHTML = "Syracuse University";
+            container.style.color = "black";
+        }
+    }
+</script>
+</html>
