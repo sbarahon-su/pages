@@ -8,6 +8,10 @@ body {
     min-height: 100vh;
 }
 
+img {
+    margin: 10px;
+}
+
 h1 {
     text-align: center;
     color: #a56de6;
@@ -38,13 +42,6 @@ footer {
     box-shadow: 0 0 10px #000;
     gap: 20px;
     align-items: flex-start;
-}
-
-.reviews img {
-    max-width: 30%;
-    border-radius: 8px;
-    object-fit: cover;
-    flex-shrink: 0;
 }
 
 .reviewcontent {
