@@ -14,6 +14,7 @@ footer {
     color: white;
     padding: 0px;
     text-align: center;
+    margin-top: auto;
 }
 
 a, a:visited {
@@ -23,6 +24,7 @@ a, a:visited {
 
 .maincontainer {
     padding: 20px;
+    flex: 1;
 }
 
 .formcontainer {
@@ -95,6 +97,17 @@ nav {
     gap: 10px;
 }
 
+#heatmapmessage {
+    display: none;
+    text-align: center;
+    color: white;
+    background-color: #181818;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
 @media screen and (max-width: 768px) {
     #nav-links {
         display: none;
@@ -106,5 +119,29 @@ nav {
 
     #nav-links.show {
         display: flex;
+    }
+
+    #heatmapcontainer {
+        display: none;
+    }
+
+    .formcontainer {
+        display: none;
+    }
+
+    #heatmapmessage {
+        display: block;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px 0;
     }
 }
