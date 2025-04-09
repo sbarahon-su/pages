@@ -30,6 +30,35 @@ a, a:visited {
     margin-bottom: 20px;
 }
 
+#heatmapcontainer {
+    width: 600px;
+    height: 150px;
+    margin: 50px auto;
+    border: 1px solid black;
+    background-color: white;
+    position: relative;
+}
+
+#labeloverlay {
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0;
+}
+
+#tooltip {
+    position: absolute;
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 5px 8px;
+                border-radius: 5px;
+                font-size: 12px;
+                pointer-events: none;
+                display: none;
+                z-index: 10;
+}
+
 nav {
     position: relative;
     display: flex;
