@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="musicstyle.css">
+    <script src="heatmap.min.js"></script>
     <title>My Music Heatmap</title>
+    <style>
+        #heatmapContainer {
+            width: 600px;
+            height: 150px;
+            margin: 50px auto;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,22 +33,17 @@
     <div class="maincontainer">
         <div class="formcontainer">
             <form action="#">
-                <label for="playlistSelector">Select Playlist:</label>
-                <select id="playlistSelector" name="playlist">
-                    <option value="playlist1">Playlist 1</option>
-                    <option value="playlist2">Playlist 2</option>
-                    <option value="playlist3">Playlist 3</option>
+                <label for="playlistselector">Select Playlist:</label>
+                <select id="playlistselector" name="playlist" onchange="updateHeatmap();">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="aux">aux</option>
                     <option value="all">All Playlists</option>
                 </select>
             </form>
         </div>
-        <div class="heatmapContainer">
-            <p>This will be where the music heatmap is displayed based on the selected playlist.</p>
-            <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/aux/pl.u-b3b8RKDtRXLy7V"></iframe>
-            <br>
-            <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/b/pl.u-6mo4lE3CP9ZBL6"></iframe>
-            <br>
-            <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/a/pl.u-b3b8RMeSRXLy7V"></iframe>
+        <div id="heatmapContainer" style="position: relative;">
+            <div id="labelOverlay" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none;"></div>
         </div>
     </div>
     <footer><p>© 2025 Sebastian Barahona-Gonzalez. All rights reserved.</p></footer>
@@ -49,5 +53,65 @@
             navLinks.classList.toggle("show");
         }
     </script>
+<script>
+const genreCounts = {
+    "Pop": 23,
+    "Rap": 65,
+    "Rock": 15,
+    "Hip-Hop": 54,
+    "Alternative Rock": 18,
+    "Trap": 12,
+    "Indie": 11
+};
+
+// Map genres to points
+const genres = Object.keys(genreCounts);
+const heatmapData = genres.map((genre, index) => {
+    return {
+        x: index * 80 + 40,       // spread along X
+        y: 50 + Math.random() * 50, // spread vertically a bit
+        value: genreCounts[genre]
+    };
+});
+
+// Create heatmap
+const heatmapInstance = h337.create({
+    container: document.getElementById('heatmapContainer'),
+    radius: 60,
+    maxOpacity: 0.6,
+    minOpacity: 0,
+    blur: 0.6,
+    gradient: {
+        '.2': 'blue',
+        '.4': 'green',
+        '.6': 'yellow',
+        '.8': 'orange',
+        '1.0': 'red'
+    }
+});
+
+// Set the data
+heatmapInstance.setData({
+    max: 65, // Highest value manually set
+    min: 0,
+    data: heatmapData
+});
+
+// Step 5: Add genre labels below each heat point
+const labelOverlay = document.getElementById('labelOverlay');
+genres.forEach((genre, index) => {
+    const label = document.createElement('div');
+    label.innerText = genre;
+    label.style.position = 'absolute';
+    label.style.left = `${index * 80 + 20}px`; // Match heatmap x
+    label.style.top = '120px'; // Below the heatmap blobs
+    label.style.fontSize = '12px';
+    label.style.color = 'black';
+    label.style.textAlign = 'center';
+    label.style.width = '80px'; // So it centers under each blob
+    labelOverlay.appendChild(label);
+});
+</script>
+
 </body>
 </html>

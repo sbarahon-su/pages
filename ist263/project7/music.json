@@ -1,0 +1,40 @@
+{
+    "playlists": [
+      {
+        "playlist_name": "a",
+        "genre_counts": {
+          "Pop": 11,
+          "Rap": 50,
+          "Rock": 9,
+          "Hip-Hop": 45,
+          "Alternative Rock": 15,
+          "Trap": 7,
+          "Indie": 6
+        }
+      },
+      {
+        "playlist_name": "b",
+        "genre_counts": {
+            "Pop": 12,
+            "Rap": 55,
+            "Rock": 12,
+            "Hip-Hop": 40,
+            "Alternative Rock": 12,
+            "Trap": 17,
+            "Indie": 10
+        }
+      },
+      {
+        "playlist_name": "aux",
+        "genre_counts": {
+            "Pop": 23,
+            "Rap": 65,
+            "Rock": 15,
+            "Hip-Hop": 54,
+            "Alternative Rock": 18,
+            "Trap": 12,
+            "Indie": 11
+        }
+      }
+    ]
+  }  
