@@ -26,7 +26,7 @@
         <div class="formcontainer">
             <form action="#">
                 <label for="playlistselector">Select Playlist:</label>
-                <select id="playlistselector" name="playlist" onchange="updateHeatmap();">
+                <select id="playlistselector" name="playlist" aria-labelledby="playlistselector" role="listbox">
                     <option value="a">a</option>
                     <option value="b">b</option>
                     <option value="aux">aux</option>
@@ -209,6 +209,8 @@
         // Initialize the heatmap with the first playlist
         initHeatmap();
         updateHeatmap();
+        // Add an event listener to the select element to handle updates
+        document.getElementById("playlistselector").addEventListener("change", updateHeatmap);
     </script>
 </body>
 </html>
