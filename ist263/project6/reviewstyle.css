@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #a56de6;
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+footer {
+    background-color: #181818;
+    color: white;
+    padding: 0px;
+    text-align: center;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    flex: 1;
+}
+
+.reviews div {
+    display: flex;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.reviews img {
+    max-width: 30%;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.reviewcontent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews h2 {
+    font-size: 24px;
+    color: #a56de6;
+    margin-bottom: 10px;
+}
+
+.reviews p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.reviews .citation {
+    font-style: italic;
+    text-align: right;
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 5px 0;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+.nav-toggle span {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    .reviews div {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .reviews img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .reviewcontent {
+        max-width: 100%;
+    }
+
+    .reviews h2 {
+        font-size: 1.5rem;
+    }
+
+    .reviews p {
+        font-size: 1rem;
+    }
+
+    .reviews .citation {
+        font-size: 0.8rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        margin: 10px;
+    }
+
+    .connect {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+}

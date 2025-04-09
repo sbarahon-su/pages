@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reviewstyle.css">
     <style>
         img {
             max-width: 20%;
@@ -14,7 +15,12 @@
 
 <body>
     <nav>
-        <div style="background-color: #181818; color: white; padding: 10px; margin: 0;">
+        <div class="nav-toggle" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="nav-links" style="background-color: #181818; color: white; padding: 10px; margin: 0;">
             <a href="index.html" style="color: white; text-decoration: none; margin-right: 10px;">About Me</a>
             <a href="reviews.html" style="color: white; text-decoration: none; margin-right: 10px;">Reviews</a>
             <a href="musicmap.html" style="color: white; text-decoration: none; margin-right: 10px;">Music Heatmap</a>
@@ -24,60 +30,75 @@
     <br>
     <div class="reviews">
         <div>
-            <h2>As Above So Below</h2>
             <img src = "/pages/ist263/projectimages/asabovesobelow.jpg" alt = "As Above So Below Poster">
-            <p>As Above So Below is a horror film written and directed by John Erick Dowdle. Told through a found film
-            perspective, it follows the lead Scarlett, a scholar following in her father's footsteps of finding the
-            philosopher’s stone. Her search leads her to the catacombs of Paris, where she is led by a guide that
-            knows the way around the forbidden sections of the catacombs. As they descend deeper into the tombs,
-            madness begins to occur. Inspired by Dante’s Inferno and the nine circles of hell, it explores the
-            characters' different sins and traumas, and the found film style helps immerse you into the journey.
-            While it's not the greatest objective film and has some rough parts, I thought the concept was very
-            interesting and have watched it so many times with friends, and would recommend it to anyone looking
-            for a more “fun” horror movie.</p>
-            <p><em>Dowdle, J. E. (2014). As Above, So Below. Universal Pictures.</em></p>
+            <div class="reviewcontent">
+                <h2>As Above So Below</h2>
+                <p>As Above So Below is a horror film written and directed by John Erick Dowdle. Told through a found film
+                perspective, it follows the lead Scarlett, a scholar following in her father's footsteps of finding the
+                philosopher’s stone. Her search leads her to the catacombs of Paris, where she is led by a guide that
+                knows the way around the forbidden sections of the catacombs. As they descend deeper into the tombs,
+                madness begins to occur. Inspired by Dante’s Inferno and the nine circles of hell, it explores the
+                characters' different sins and traumas, and the found film style helps immerse you into the journey.
+                While it's not the greatest objective film and has some rough parts, I thought the concept was very
+                interesting and have watched it so many times with friends, and would recommend it to anyone looking
+                for a more “fun” horror movie.</p>
+                <p class="citation"><em>Dowdle, J. E. (2014). As Above, So Below. Universal Pictures.</em></p>
+            </div>
         </div>
 
         <hr>
 
         <div>
-            <img src = "/pages/ist263/projectimages/silenceofthelambs.jpg" alt = "The Silence of the Lambs Poster">
-            <h2>The Silence of the Lambs</h2>
-            <p>The Silence of the Lambs is a psychological horror film written by Ted Tally and directed by Jonathan
-            Demme. Adapted from Thomas Harris’s novel, it follows an FBI agent Clarice, who is on the hunt for
-            Buffalo Bill. On her search, she gets help from Dr. Hannibal Lecter, a genius cannibalistic serial killer who
-            has long been imprisoned. The casting of this movie is absolutely perfect and helps express the
-            complexities of the interactions and conversations between the lead and Hannibal perfectly. It was an
-            extremely interesting concept to see someone who is depicted as barbaric and inhumane be so
-            intelligent and able to possess control of the conversations he’s in so well, and throughout the movie I
-            even felt persuaded by him at times. This adaptation is one of the best I’ve ever seen and in my opinion
-            perfectly encapsulates the novel's feel.</p>
-            <p><em>Demme, J. (1991). The Silence of the Lambs. Orion Pictures.</em></p>
+            <img src = "/pages/ist263/projectimages/silenceofthelambs.jpg" alt = "The Silence of the Lambs Poster" style="max-width: 20%; margin: 10px;">
+            <div class="reviewcontent">
+                <h2>The Silence of the Lambs</h2>
+                <p>The Silence of the Lambs is a psychological horror film written by Ted Tally and directed by Jonathan
+                Demme. Adapted from Thomas Harris’s novel, it follows an FBI agent Clarice, who is on the hunt for
+                Buffalo Bill. On her search, she gets help from Dr. Hannibal Lecter, a genius cannibalistic serial killer who
+                has long been imprisoned. The casting of this movie is absolutely perfect and helps express the
+                complexities of the interactions and conversations between the lead and Hannibal perfectly. It was an
+                extremely interesting concept to see someone who is depicted as barbaric and inhumane be so
+                intelligent and able to possess control of the conversations he’s in so well, and throughout the movie I
+                even felt persuaded by him at times. This adaptation is one of the best I’ve ever seen and in my opinion
+                perfectly encapsulates the novel's feel.</p>
+                <p class="citation"><em>Demme, J. (1991). The Silence of the Lambs. Orion Pictures.</em></p>
+            </div>
         </div>
         <hr>
         <div>
             <img src = "/pages/ist263/projectimages/grownups.jpg" alt = "Grown Ups Poster">
+            <div class="reviewcontent">
             <h2>Grown Ups</h2>
-            <p>Grown Ups is a comedy movie directed by Dennis Dugan, written by Adam Sandler and Fred Wolf. This
-            movie follows a ragtag group of friends-turned-dads, and is a hilarious film to watch when you’re just
-            looking to unwind. Adam Sandler is one of my favorite actors and the fact he got to basically play
-            himself as a character, he just fits perfectly into the role. The entire cast is filled with comedy gems and
-            it reminds me a lot of my personal friend group, which helps push it into my all-time favorites.</p>
-            <p><em>Dugan, D. (2010). Grown Ups. Columbia Pictures.</em></p>
+                <p>Grown Ups is a comedy movie directed by Dennis Dugan, written by Adam Sandler and Fred Wolf. This
+                movie follows a ragtag group of friends-turned-dads, and is a hilarious film to watch when you’re just
+                looking to unwind. Adam Sandler is one of my favorite actors and the fact he got to basically play
+                himself as a character, he just fits perfectly into the role. The entire cast is filled with comedy gems and
+                it reminds me a lot of my personal friend group, which helps push it into my all-time favorites.</p>
+                <p class="citation"><em>Dugan, D. (2010). Grown Ups. Columbia Pictures.</em></p>
+            </div>
         </div>
         <hr>
         <div>
             <img src = "/pages/ist263/projectimages/onepiece.jpg" alt = "One Piece Poster">
-            <h2>One Piece</h2>
-            <p>One Piece is a cartoon and novel series written by Eiichiro Oda, that follows Luffy and his crew on his
-            journey to becoming King of the Pirates. Seemingly lighthearted, it explores themes of freedom, unity,
-            and oppression through a tyrannical world government. Over 1000 episodes and counting, it’s
-            impossible to explain this story and its significance. While this show is a bit more personal to me as I’ve
-            grown up with it since I was a kid, it's genuinely one of the greatest fiction works I’ve ever read and
-            watched. The worldbuilding and character development is absolutely perfect, rivaling Tolkien’s works in
-            my opinion, and I would recommend this show to anyone looking for something to watch.</p>
-            <p><em>Oda, E. & Uda, K. (1999–present). One Piece. Toei Animation.</em></p>
+            <div class="reviewcontent">
+                <h2>One Piece</h2>
+                <p>One Piece is a cartoon and novel series written by Eiichiro Oda, that follows Luffy and his crew on his
+                journey to becoming King of the Pirates. Seemingly lighthearted, it explores themes of freedom, unity,
+                and oppression through a tyrannical world government. Over 1000 episodes and counting, it’s
+                impossible to explain this story and its significance. While this show is a bit more personal to me as I’ve
+                grown up with it since I was a kid, it's genuinely one of the greatest fiction works I’ve ever read and
+                watched. The worldbuilding and character development is absolutely perfect, rivaling Tolkien’s works in
+                my opinion, and I would recommend this show to anyone looking for something to watch.</p>
+                <p class="citation"><em>Oda, E. & Uda, K. (1999–present). One Piece. Toei Animation.</em></p>
+            </div>
         </div>
     </div>
+    <footer><p>© 2025 Sebastian Barahona-Gonzalez. All rights reserved.</p></footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
