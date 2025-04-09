@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 img {
@@ -76,6 +77,15 @@ hr {
     margin: 5px 0;
 }
 
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181818;
+    padding: 10px;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -89,6 +99,16 @@ hr {
     height: 4px;
     width: 100%;
     border-radius: 2px;
+}
+
+#nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

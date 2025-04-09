@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="musicstyle.css">
     <title>My Music Heatmap</title>
 </head>
 
 <body>
     <nav>
-        <div style="background-color: #181818; color: white; padding: 10px; margin: 0;">
-            <a href="index.html" style="color: white; text-decoration: none; margin-right: 10px;">About Me</a>
-            <a href="reviews.html" style="color: white; text-decoration: none; margin-right: 10px;">Reviews</a>
-            <a href="musicmap.html" style="color: white; text-decoration: none; margin-right: 10px;">Music Heatmap</a>
+        <div class="nav-toggle" aria-label="Toggle Navigation Menu" tabindex="0" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="nav-links">
+            <a href="index.html">About Me</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="musicmap.html">Music Heatmap</a>
         </div>
     </nav>
-    <div style="background-color: black; color: white; padding: 10px; margin: 0;">
-        <h1>Music Heatmap</h1>
-    </div>
-    <div style="padding: 20px;">
-        <div style="text-align: right; margin-bottom: 20px;">
+    <h1>Music Heatmap</h1>
+    <div class="maincontainer">
+        <div class="formcontainer">
             <form action="#">
                 <label for="playlistSelector">Select Playlist:</label>
                 <select id="playlistSelector" name="playlist">
@@ -29,7 +33,7 @@
                 </select>
             </form>
         </div>
-        <div id="heatmapContainer">
+        <div class="heatmapContainer">
             <p>This will be where the music heatmap is displayed based on the selected playlist.</p>
             <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/aux/pl.u-b3b8RKDtRXLy7V"></iframe>
             <br>

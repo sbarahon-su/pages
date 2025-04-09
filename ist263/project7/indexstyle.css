@@ -132,6 +132,15 @@ h2 {
     display: block;
 }
 
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181818;
+    padding: 10px;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -145,6 +154,16 @@ h2 {
     height: 4px;
     width: 100%;
     border-radius: 2px;
+}
+
+#nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -169,7 +188,7 @@ h2 {
         gap: 10px;
         text-align: center;
     }
-    
+
     #nav-links {
         display: none;
         flex-direction: column;
@@ -177,7 +196,7 @@ h2 {
         text-align: center;
         padding: 20px 0;
     }
-    
+
     #nav-links.show {
         display: flex;
     }
