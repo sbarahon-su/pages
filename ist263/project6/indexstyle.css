@@ -141,6 +141,13 @@ nav {
     padding: 10px;
 }
 
+.nav-links {
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -159,11 +166,6 @@ nav {
 #nav-links {
     display: flex;
     gap: 10px;
-}
-
-#nav-links a {
-    color: white;
-    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

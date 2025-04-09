@@ -12,6 +12,11 @@ img {
     margin: 10px;
 }
 
+a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
 h1 {
     text-align: center;
     color: #a56de6;
@@ -76,6 +81,22 @@ hr {
     margin: 5px 0;
 }
 
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181818;
+    padding: 10px;
+}
+
+.nav-links {
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -89,6 +110,11 @@ hr {
     height: 4px;
     width: 100%;
     border-radius: 2px;
+}
+
+#nav-links {
+    display: flex;
+    gap: 10px;
 }
 
 @media screen and (max-width: 768px) {

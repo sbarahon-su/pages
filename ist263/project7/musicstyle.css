@@ -9,11 +9,16 @@ body {
     overflow-x: hidden;
 }
 
-.nav-links {
+footer {
     background-color: #181818;
     color: white;
-    padding: 10px;
-    margin: 0;
+    padding: 0px;
+    text-align: center;
+}
+
+a, a:visited {
+    color: white;
+    text-decoration: none;
 }
 
 .maincontainer {
@@ -32,6 +37,13 @@ nav {
     align-items: center;
     background-color: #181818;
     padding: 10px;
+}
+
+.nav-links {
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    margin: 0;
 }
 
 .nav-toggle {
@@ -54,17 +66,7 @@ nav {
     gap: 10px;
 }
 
-#nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
 @media screen and (max-width: 768px) {
-    .nav-toggle {
-        display: flex;
-        margin: 10px;
-    }
-    
     #nav-links {
         display: none;
         flex-direction: column;
@@ -72,7 +74,7 @@ nav {
         text-align: center;
         padding: 20px 0;
     }
-    
+
     #nav-links.show {
         display: flex;
     }
