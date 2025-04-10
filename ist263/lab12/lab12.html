@@ -6,7 +6,7 @@
      <style>
          body {
              font-family: Verdana, Geneva, Tahoma, sans-serif; 
-             background-color: #111111;
+             background-color: #000000;
              color: #ffffff;
          }
          #slideshow-container {
@@ -14,8 +14,11 @@
              width: 1200px;
              margin: auto; /* margin auto is centering this container */        
          }
-         #bigimages {margin-right: 100px;}
-         #planetinfo {padding: 100px;}
+         #bigimages {margin-right: 100px;
+                    float: left;}
+         #planetinfo {padding: 100px;
+                    width: 300px;
+        }
          #thumbnails {width: 840px; margin: auto; padding-top: 20px;} 
          /* ^^ margin auto is centering this container */
          #mercurythumb, #venusthumb, #earththumb, #marsthumb, #jupiterthumb, #saturnthumb, #uranusthumb, #neptunethumb 
@@ -27,7 +30,10 @@
              display: none;
          }
          #planetinfo {
-            float: left;
+            float: right;
+         }
+         #thumbnails {
+            float:inline-start
          }
      </style>
      <script>
