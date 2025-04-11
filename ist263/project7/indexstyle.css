@@ -185,9 +185,11 @@ nav a:hover {
         align-items: center;
     }
 
-    .aboutme, .projects, .apps, .skills {
-        width: 90%;
+    .aboutme, .projects, .apps, .skills, .skillscontainer {
+        width: 100%;
+        max-width: 100%;
         margin-bottom: 20px;
+        box-sizing: border-box;
     }
 
     .nav-toggle {
@@ -212,5 +214,11 @@ nav a:hover {
 
     #nav-links.show {
         display: flex;
+    }
+
+    .linkcontainer {
+        width: 100%;
+        max-width: 240px;
+        overflow-x: auto;
     }
 }
