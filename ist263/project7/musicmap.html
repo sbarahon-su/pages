@@ -22,7 +22,17 @@
         </div>
     </nav>
     <h1>Music Heatmap</h1>
-    <p>This is a heatmap rendition of my current favorite playlists, made using heatmap.js, a javascript library for creating a heatmap off of data.</p>
+    <p>Below is a heatmap rendition of my daily playlists, created using heatmap.js, a JavaScript library that takes in data and outputs a heatmap off of that data. If you hover over the different heatzones you will get a dynamically generated tooltip of the corresponding genre and its intensity, or amount of times it showed up in each playlist.</p>
+    <legend>
+        <div class="legendcontainer">
+            <h2>Heat Legend</h2>
+            <p>Red: Max</p>
+            <p>Yellow: Average</p>
+            <p>Blue: Min</p>
+            <p>Note: The heatmap is not supported on mobile devices.</p>
+        </div>
+    </legend>
+    
     <div class="maincontainer">
         <div class="formcontainer">
             <form action="#">
@@ -42,15 +52,17 @@
         </div>
         <div id="heatmapmessage">Heatmap is not supported on mobile.</div>
     </div>
-    <div class="topartists">
-        <h2>Top Artists</h2>
-        <ul>
-            <li>Artist 1</li>
-            <li>Artist 2</li>
-            <li>Artist 3</li>
-            <li>Artist 4</li>
-            <li>Artist 5</li>
-        </ul>
+    <div class="artistcontainer">
+        <div class="topartists">
+            <h2>Top Artists</h2>
+            <ol>
+                <li>Joey Bada$$</li>
+                <li>JID</li>
+                <li>Travis Scott</li>
+                <li>Paramore</li>
+                <li>A Boogie wit da Hoodie</li>
+            </ol>
+        </div>
     </div>
     <footer><p>© 2025 Sebastian Barahona-Gonzalez. All rights reserved.</p></footer>
     <script>

@@ -13,6 +13,14 @@ h1 {
     color: #ad87d9;
     text-align: center;
     font-size: 36px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    color: #ad87d9;
+    text-align: center;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 p {
@@ -53,6 +61,25 @@ a, a:visited {
     border: 1px solid black;
     background-color: white;
     position: relative;
+}
+
+.artistcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legendcontainer {
+    margin: 20px auto;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.topartists {
+    text-align: center;
 }
 
 #labeloverlay {
