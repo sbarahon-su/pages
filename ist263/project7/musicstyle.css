@@ -9,6 +9,20 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    color: #ad87d9;
+    text-align: center;
+    font-size: 36px;
+}
+
+p {
+    margin: 20px;
+}
+
+nav a:hover {
+    color: #a56de6;
+}
+
 footer {
     background-color: #181818;
     color: white;

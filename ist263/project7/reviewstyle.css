@@ -17,10 +17,13 @@ a, a:visited {
     text-decoration: none;
 }
 
+nav a:hover {
+    color: #a56de6;
+}
+
 h1 {
     text-align: center;
-    color: #a56de6;
-    margin-top: 20px;
+    color: #ad87d9;
     font-size: 36px;
 }
 

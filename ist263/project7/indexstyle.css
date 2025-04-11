@@ -9,6 +9,12 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    text-align: center;
+    color: #ad87d9;
+    font-size: 36px;
+}
+
 div {
     box-sizing: border-box;
 }
@@ -48,7 +54,7 @@ a, a:visited {
     text-decoration: none;
 }
 
-.aboutme, .projects, .apps {
+.aboutme, .projects, .apps, .skillscontainer {
     width: 400px;
     background-color: #2a2929;
     padding: 20px;
@@ -146,6 +152,10 @@ nav {
     color: white;
     padding: 10px;
     margin: 0;
+}
+
+nav a:hover {
+    color: #a56de6;
 }
 
 .nav-toggle {
