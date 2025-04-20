@@ -24,7 +24,7 @@ nav a:hover {
 h1 {
     text-align: center;
     color: #ad87d9;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -60,21 +60,21 @@ footer {
 }
 
 .reviews h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #a56de6;
     margin-bottom: 10px;
 }
 
 .reviews p {
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 20px;
 }
 
 .reviews .citation {
     font-style: italic;
     text-align: right;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #aaa;
     margin-top: 10px;
 }
